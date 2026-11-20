@@ -46,9 +46,27 @@
 | ------- | ---------------------- |
 | SSD1683 | EDP<br />version=1.0.0 |
 
-### 5,Quick Start
+### 5, Quick Start
 
-##### Arduino IDE starts
+#### SolarOS
+![CrowPanel running SolarOS](solaros.jpg)
+[SolarOS](https://solar-os.eu/) turns this CrowPanel into a pocket computer with a terminal, writing and reading apps, Wi-Fi, and Python scripting. Install prebuilt firmware directly from your browser:
+
+1. Connect the CrowPanel to your computer with a USB data cable. Use Chrome or Edge on a desktop computer for browser flashing.
+2. Open the [SolarOS Flasher for the CrowPanel 5.79-inch](https://solar-os.eu/flasher.html?board=elecrow_crowpanel_esp32_s3_5_79_epaper&flavor=writerdeck&layout=ota). This link selects **Elecrow CrowPanel ESP32-S3 5.79-inch E-paper**, the compact `writerdeck` flavor, and **OTA updates**. Use the latest available release.
+3. Choose **Prepare image**, then read and accept the erase warning. Installation replaces the existing firmware and all data in the device's internal flash.
+4. Choose **Connect and flash**, select the CrowPanel's serial port, and keep the cable connected until installation completes. Press **RESET** if the board does not restart automatically.
+5. When the SolarOS shell appears, put a BLE keyboard into pairing mode. Hold the CrowPanel's **MENU** button for about two seconds, then release it when the keyboard icon changes to its pairing/scanning state. Once connected, type `help` to get started.
+
+If flashing cannot enter download mode automatically, hold **BOOT**, tap **RESET**, then release **BOOT** and retry.
+
+For a broader application selection, choose the `full` flavor and **Serial only** in the Flasher. This layout requires USB flashing for firmware updates. A FAT32 microSD card provides space for documents, scripts, and applications.
+
+- [SolarOS quick start](https://solar-os.eu/quick-start.html): keyboard pairing, Wi-Fi setup, storage, and first commands.
+- [CrowPanel 5.79-inch board guide](https://solar-os.eu/docs/manual/boards.html#elecrow-crowpanel-esp32-s3-5-79-inch-e-paper): board controls, display options, and building and flashing from source with the `elecrow_crowpanel_esp32_s3_5_79_epaper` PlatformIO environment.
+- [SolarOS source code](https://github.com/nilseuropa/solar_os) and [user manual](https://solar-os.eu/docs/manual/overview.html).
+
+#### Arduino IDE setup
 
 1.Download the library files used by this product to the 'libraries' folder.
 
